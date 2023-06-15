@@ -113,16 +113,19 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   position: absolute;
   top: 100%;
-  right: -100%;
-  width: 40rem;
+  right: -110%;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--color-blue);
+  background-color: var(--color-white);
 }
 .navBar.active {
-  right: 2rem;
+  right: 0;
   transition: 0.5s linear;
 }
 .navBar__link {
@@ -134,7 +137,7 @@ img {
   /* margin: 2rem 2rem; */
 }
 .active .navBar__link {
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 .navBar__link:hover,
 .navBar__link.active {
@@ -378,12 +381,15 @@ img {
 .beach__title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
-.beach__contenido > p {
-  text-align: center;
+@media (min-width: 768px) {
+  .beach__title {
+    font-size: 2.5rem;
+  }
 }
+
 .imagenes img {
   object-fit: cover;
   height: 100%;
